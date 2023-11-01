@@ -1,38 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import './App.css'
-
-type Product = {
-  id: number
-  name: string
-  price: number
-  category: string
-}
+import { RootStateType } from './store/createStore'
+import { useAppDispatch } from './common/hooks/useAppDispatch'
+import { getProducts } from './store/reducers/ProductsSlice/slice'
+import { useEffect } from 'react'
 
 function App() {
-  const [products, setProducts] = useState<Product[]>([])
-  console.log(products);
-
+  const products = useSelector((state: RootStateType) => state.products.products)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/products').then((response) => {
-      return response.json()
-    })
-    .then((products) => {
-      setProducts(products)
-    })
-  }, [])
+    dispatch(getProducts())
+  })
 
   return (
     <>
-    <ul>
-      {products.map((product) => (
-        <div key={product.id}>
-          <p>{product.name}</p>
-          <p>{product.price}</p>
-          <p>{product.category}</p>
+      <ul>
+        {products.map((product) => (
+          <div key={product.id}>
+            <p>{product.name}</p>
+            <p>{product.price}</p>
+            <p>{product.category}</p>
           </div>
-      ))}
-    </ul>
+        ))}
+      </ul>
     </>
   )
 }
