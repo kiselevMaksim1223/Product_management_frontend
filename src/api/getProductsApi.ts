@@ -1,3 +1,5 @@
 export const getProductsApi = () => {
-    return fetch('http://localhost:3001/api/products')
-}
+  console.log(import.meta.env.VITE_BACKEND_PROD);
+
+  return fetch(import.meta.env.VITE_BACKEND_PROD || 'localhost:3001/api/products');
+};
