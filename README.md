@@ -1,28 +1,93 @@
-# React + TypeScript + Vite
+# Product Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a web application developed using Vite, React, Redux-toolkit, Redux-Saga, and Tailwind CSS. The application allows you to manage and view a list of products in a table format, providing features such as pagination, searching by product name, filtering by product category, and sorting by product price.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The product management application provides the following features:
 
-## Expanding the ESLint configuration
+Display a list of products in a table format.
+Pagination to navigate through the product list.
+Search functionality to find products by name.
+Filter products by category.
+Sort products by price.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Deploy version
 
-- Configure the top-level `parserOptions` property like this:
+You can see the demo on https://bidusdigital-test.netlify.app/
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Local Setup
+
+### Prerequisites
+
+Before running the application, make sure you have the following dependencies installed on your system:
+
+- [Node.js](https://nodejs.org/) (npm will be installed alongside Node.js)
+
+### Installation
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/kiselevMaksim1223/Bidusdigital_frontend_test
+
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Bidusdigital_frontend_test
+
+   ```
+
+3. Install the project dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+## Backend Setup
+
+To run the application locally, you need to set up the backend, which is available in a separate repository. Follow these steps to set up the backend:
+
+1. Clone the Backend Repository
+
+   ```bash
+   git clone https://github.com/kiselevMaksim1223/Bidusdigital_backend_test
+
+   ```
+
+2. Navigate to the Backend Directory
+
+   ```bash
+   cd Bidusdigital_backend_test
+
+   ```
+
+3. Install Backend Dependencies
+
+   ```bash
+   npm install
+
+   ```
+
+4. Start the Backend Server
+
+   ```bash
+   node functions/api.js
+
+   ```
+
+## Running the Application
+
+After setting up both the frontend and backend, you can run the application:
+
+Start the development server for the frontend:
+
+```bash
+npm run dev
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# Bidusdigital_frontend_test
+Access the application in your web browser at http://localhost:5173.
