@@ -64,7 +64,7 @@ const Pagination: FC<IPaginationProps> = ({
               number === currentPage ? 'text-blue-500 border-blue-200' : ''
             }`}
           >
-            <a onClick={() => paginate(number)} className="page-link">
+            <a onClick={() => paginate(number)} className="cursor-pointer">
               {number}
             </a>
           </li>
