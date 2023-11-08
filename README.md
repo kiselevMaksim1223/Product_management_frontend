@@ -14,7 +14,7 @@ Sort products by price.
 
 ## Deploy version
 
-You can see the demo on https://bidusdigital-test.netlify.app/
+You can see the demo on https://bidusdigital-test.netlify.app/ or https://bidusdigital-frontend-test.vercel.app/
 
 ## Local Setup
 
