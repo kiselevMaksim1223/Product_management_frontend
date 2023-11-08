@@ -6,12 +6,14 @@ interface IFilterState {
   selectedCategory: string;
   search: string;
   sort: sortType;
+  currentPage: number;
 }
 
 const initialState: IFilterState = {
   selectedCategory: 'Все категории',
   search: '',
   sort: '',
+  currentPage: 1,
 };
 
 const filtersSlice = createSlice({
@@ -27,8 +29,13 @@ const filtersSlice = createSlice({
     setSort(state, action: PayloadAction<sortType>) {
       state.sort = action.payload;
     },
+    setCurrentPage(state, action: PayloadAction<number>) {
+      if (action.payload > 0) {
+        state.currentPage = action.payload;
+      }
+    },
   },
 });
 
-export const { setCategory, setSearch, setSort } = filtersSlice.actions;
+export const { setCategory, setSearch, setSort, setCurrentPage } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;

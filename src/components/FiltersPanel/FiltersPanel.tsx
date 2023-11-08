@@ -2,7 +2,11 @@ import { ChangeEvent } from 'react';
 
 import { useAppDispatch } from '../../common/hooks/useAppDispatch';
 import { useAppSelector } from '../../common/hooks/useAppSelector';
-import { setCategory, setSearch } from '../../store/reducers/FiltersSlice/slice';
+import {
+  setCategory,
+  setCurrentPage,
+  setSearch,
+} from '../../store/reducers/FiltersSlice/slice';
 import { uniqueCategoryValues } from '../../ui-kit/Select/helpers/uniqueCategoryValues';
 import Select from '../../ui-kit/Select/Select';
 
@@ -19,6 +23,7 @@ const FiltersPanel = () => {
 
   const setSelectedCategoryHandler = (category: string) => {
     dispatch(setCategory(category));
+    dispatch(setCurrentPage(1));
   };
   return (
     <div className="mb-5 flex flex-col gap-2 justify-between sm:flex-row">

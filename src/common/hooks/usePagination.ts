@@ -1,12 +1,15 @@
-import { useState } from 'react';
+import { setCurrentPage } from '../../store/reducers/FiltersSlice/slice';
+import { useAppDispatch } from './useAppDispatch';
+import { useAppSelector } from './useAppSelector';
 
 export const usePagination = (productsPerPage: number) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const currentPage = useAppSelector((state) => state.filters.currentPage);
+  const dispatch = useAppDispatch();
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber: number) => dispatch(setCurrentPage(pageNumber));
 
   return {
     currentPage,
