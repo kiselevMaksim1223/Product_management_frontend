@@ -15,7 +15,7 @@ const Select: FC<ISelectProps> = ({ defaultValue, menuItems, selected, setSelect
     <div className="w-72 font-medium">
       <div
         onClick={() => setOpen(!open)}
-        className={`bg-white w-full shadow p-2 flex items-center justify-between rounded ${
+        className={`bg-white w-full shadow p-2 flex items-center justify-between rounded cursor-pointer ${
           !selected && 'text-gray-700'
         }`}
       >
@@ -35,7 +35,7 @@ const Select: FC<ISelectProps> = ({ defaultValue, menuItems, selected, setSelect
         {menuItems?.map((menuItem, index) => (
           <li
             key={index}
-            className={`p-2 text-sm hover:bg-blue-500 hover:text-white
+            className={`p-2 text-sm hover:bg-blue-500 hover:text-white cursor-pointer
             ${menuItem?.toLowerCase() === selected?.toLowerCase() && 'bg-gray-300'}
             `}
             onClick={() => {
