@@ -29,14 +29,14 @@ Before running the application, make sure you have the following dependencies in
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/kiselevMaksim1223/Bidusdigital_frontend_test
+   git clone https://github.com/kiselevMaksim1223/Product_management_frontend
 
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd Bidusdigital_frontend_test
+   cd Product_management_frontend
 
    ```
 
@@ -54,14 +54,14 @@ To run the application locally, you need to set up the backend, which is availab
 1. Clone the Backend Repository
 
    ```bash
-   git clone https://github.com/kiselevMaksim1223/Bidusdigital_backend_test
+   git clone https://github.com/kiselevMaksim1223/Product_management_backend
 
    ```
 
 2. Navigate to the Backend Directory
 
    ```bash
-   cd Bidusdigital_backend_test
+   cd Product_management_backend
 
    ```
 
